@@ -12,23 +12,25 @@
 </body>
 <footer>
     <p>JacksonBees</p>
-    <p class="address">16 Brookshire Lane</p>
-    <p class="address">Penfield, NY 14526</p>
-    <button id="openMaps">Get Directions</button>
+    <div>
+        <p class="address">16 Brookshire Lane</p>
+        <p class="address">Penfield, NY 14526</p>
+        <button class="mapbutton" id="openMaps">Get Directions</button>
 
-    <script>
-        document.getElementById('openMaps').onclick = function() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            
-            var address = "16+Brookshire+Lane,+Penfield,+NY+14526";
-            if (/android/i.test(userAgent)) {
-                window.location.href = "https://www.google.com/maps?q=" + address; // For Android, Google Maps
-            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = "http://maps.apple.com/?q=" + address; // For iOS, Apple Maps
-            } else {
-                window.location.href = "https://www.google.com/maps?q=" + address; // Default to Google Maps on other platforms
-            }
-        };
-    </script>
+        <script>
+            document.getElementById('openMaps').onclick = function() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                
+                var address = "16+Brookshire+Lane,+Penfield,+NY+14526";
+                if (/android/i.test(userAgent)) {
+                    window.location.href = "https://maps.app.goo.gl/pmvy6sK2oqkyY1Du6", "_blank"; // For Android, Google Maps
+                } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    window.location.href = "https://maps.apple.com/?address=16%20Brookshire%20Ln,%20Penfield,%20NY%20%2014526,%20United%20States&ll=43.136511,-77.453613&q=Jackson%20Bees", "_blank"; // For iOS, Apple Maps
+                } else {
+                    window.location.href = "https://maps.app.goo.gl/pmvy6sK2oqkyY1Du6", "_blank"; // Default to Google Maps on other platforms
+                }
+            };
+        </script>
+    </div>
 </footer>
 </html>
