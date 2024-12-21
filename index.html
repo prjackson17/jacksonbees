@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson Bees</title>
+    <title>JacksonBees</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>JacksonBees</h1>
     <img src="images/honey_stand.jpg" alt="A picture of a honey stand">
 </body>
+<footer>
+    <p>JacksonBees</p>
+    <p class="address">16 Brookshire Lane</p>
+    <p class="address">Penfield, NY 14526</p>
+    <button id="openMaps">Get Directions</button>
+
+    <script>
+        document.getElementById('openMaps').onclick = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            var address = "16+Brookshire+Lane,+Penfield,+NY+14526";
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://www.google.com/maps?q=" + address; // For Android, Google Maps
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "http://maps.apple.com/?q=" + address; // For iOS, Apple Maps
+            } else {
+                window.location.href = "https://www.google.com/maps?q=" + address; // Default to Google Maps on other platforms
+            }
+        };
+    </script>
+</footer>
 </html>

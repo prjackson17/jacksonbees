@@ -10,5 +10,8 @@ img {
     max-width: 50%;
     height: auto;
     border-radius: 8px;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+.address {
+    font-style: italic;
 }
