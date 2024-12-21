@@ -8,28 +8,28 @@
 </head>
 <body>
     <h1>JacksonBees</h1>
-    <img src="images/honey_stand.jpg" alt="A picture of a honey stand">
+    <img src="resources/img/honey_stand.jpg" alt="A picture of a honey stand">
+    <footer>
+        <p class="footername">JacksonBees</p>
+        <div>
+            <p class="address">16 Brookshire Lane</p>
+            <p class="address">Penfield, NY 14526</p>
+            <button class="mapbutton" id="openMaps">Get Directions</button>
+    
+            <script>
+                document.getElementById('openMaps').onclick = function() {
+                    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                    
+                    if (/android/i.test(userAgent)) {
+                        window.open("https://maps.app.goo.gl/pmvy6sK2oqkyY1Du6", "_blank"); // For Android, Google Maps
+                    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                        window.open("https://maps.apple.com/?address=16%20Brookshire%20Ln,%20Penfield,%20NY%20%2014526,%20United%20States&ll=43.136511,-77.453613&q=Jackson%20Bees", "_blank"); // For iOS, Apple Maps
+                    } else {
+                        window.open("https://maps.app.goo.gl/pmvy6sK2oqkyY1Du6", "_blank"); // Default to Google Maps on other platforms
+                    }
+                };
+            </script>
+        </div>
+    </footer>
 </body>
-<footer>
-    <p>JacksonBees</p>
-    <div>
-        <p class="address">16 Brookshire Lane</p>
-        <p class="address">Penfield, NY 14526</p>
-        <button class="mapbutton" id="openMaps">Get Directions</button>
-
-        <script>
-            document.getElementById('openMaps').onclick = function() {
-                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                
-                if (/android/i.test(userAgent)) {
-                    window.open("https://maps.app.goo.gl/pmvy6sK2oqkyY1Du6", "_blank"); // For Android, Google Maps
-                } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                    window.open("https://maps.apple.com/?address=16%20Brookshire%20Ln,%20Penfield,%20NY%20%2014526,%20United%20States&ll=43.136511,-77.453613&q=Jackson%20Bees", "_blank"); // For iOS, Apple Maps
-                } else {
-                    window.open("https://maps.app.goo.gl/pmvy6sK2oqkyY1Du6", "_blank"); // Default to Google Maps on other platforms
-                }
-            };
-        </script>
-    </div>
-</footer>
 </html>
