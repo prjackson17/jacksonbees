@@ -10,6 +10,25 @@ html, body {
     background-color: #fffacd;
 }
 
+#navbutton {
+    padding: 5px;
+    background-color: rgba(0, 0, 255, 0.75);
+    margin: 10px;
+}
+
+#navbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbutton a:hover {
+    color: grey;
+}
+
+#navbutton a:checked {
+    color:aqua;
+}
+
 header {
     background-color: #ffeb3bd6;
     padding: 10px;
@@ -23,7 +42,6 @@ nav {
     justify-content: center;
     margin: 0;
     padding: 0;
-    /* make inline */
     list-style: none;
 }
 
@@ -75,7 +93,7 @@ img {
 
 .mapbutton {
     margin-top: 5px;
-    padding: 5px 5px;
+    padding: 5px;
     background-color: rgba(0, 0, 255, 0.75); /* Green background */
     color: white; /* White text */
     border: none; /* Remove borders */
