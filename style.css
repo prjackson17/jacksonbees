@@ -81,7 +81,9 @@ footer {
 
 img {
     display: block;
-    max-width: 35%;
+    width: 35%;
+    min-width: 100px;
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
     margin: 20px auto;
@@ -116,3 +118,9 @@ img {
 .mapbutton:checked {
     background-color: rgba(0, 0, 255, .5); /* Add a darker blue when hovering */
 }
+
+#honeybee {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}   
