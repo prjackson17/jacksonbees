@@ -82,7 +82,7 @@ footer {
 img {
     display: block;
     width: 35%;
-    min-width: 100px;
+    min-width: 200px;
     max-width: 300px;
     height: auto;
     border-radius: 8px;
@@ -121,6 +121,7 @@ img {
 
 #honeybee {
     width: 100%;
+    min-width: 50px;
     max-width: 100px;
     height: auto;
     border: 0;
