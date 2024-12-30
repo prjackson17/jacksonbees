@@ -46,9 +46,10 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: auto;
+    width: 50%;
 }
 
 nav {
