@@ -37,7 +37,6 @@ header {
     background-color: var(--header-color);
     padding: 10px;
     width: 100%;
-    box-sizing: border-box;
     margin: 0;
     position: sticky;
     top: 0;
@@ -45,11 +44,18 @@ header {
 }
 
 .header-content {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    margin: auto;
-    width: 50%;
+    justify-content: center;
+}
+
+#honeybee {
+    min-width: 50px;
+    max-width: 100px;
+    height: auto;
+    margin: 5px 10px;
 }
 
 nav {
@@ -126,13 +132,3 @@ img {
 .mapbutton:checked {
     background-color: rgba(0, 0, 255, .5); /* Add a darker blue when hovering */
 }
-
-#honeybee {
-    width: 100%;
-    min-width: 50px;
-    max-width: 100px;
-    height: auto;
-    border: 0;
-    padding: 0;
-    margin: 0 auto;
-}   
