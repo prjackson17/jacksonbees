@@ -9,7 +9,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: #fffacd;
 }
@@ -131,4 +131,23 @@ img {
 }
 .mapbutton:checked {
     background-color: rgba(0, 0, 255, .5); /* Add a darker blue when hovering */
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack the logo and nav bar vertically */
+        align-items: center;    /* Center align the elements */
+        padding: 10px;
+    }
+
+    #honeybee {
+        width: 70%; /* Make the logo smaller for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    nav label {
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center;
+        padding: 0;
+    }
 }
