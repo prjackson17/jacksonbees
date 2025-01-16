@@ -133,6 +133,22 @@ footer {
     background-color: rgba(0, 0, 255, .5); /* Add a darker blue when hovering */
 }
 
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    header h2 {
+        font-size: 1.5rem; /* Larger font size for larger screens */
+    }
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .header-content {
@@ -146,21 +162,7 @@ footer {
         margin-bottom: 10px;
     }
 
-    nav label {
-        flex-direction: column; /* Stack nav links vertically */
-        align-items: center;
-        padding: 0;
-    }
-}
-
-/* Media query for larger screens */
-@media (min-width: 768px) {
-    .header-content {
-        flex-direction: column; /* Stack logo and text vertically */
-        align-items: center;
-    }
-
-    .header-text {
-        text-align: center;
+    header h2 {
+        font-size: 1rem; /* Smaller font size for smaller screens */
     }
 }
