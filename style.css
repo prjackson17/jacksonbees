@@ -50,11 +50,12 @@ header {
     justify-content: center;
 }
 
-#honeybee {
-    min-width: 50px;
-    max-width: 100px;
+#logo {
+    min-width: 100px;
+    max-width: 200px;
     height: auto;
     margin: 5px 10px;
+    padding-bottom: 10px;
 }
 
 nav {
@@ -92,7 +93,7 @@ footer {
     margin: 0;
 }
 
-img {
+#honey_stand {
     display: block;
     width: 35%;
     min-width: 200px;
