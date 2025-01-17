@@ -6,24 +6,45 @@
     <title>JacksonBees</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="resources/img/honeybee.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header id="header">
         <div class="header-content">
-            <img id="logo" src="resources/img/JacksonBees logo 2024.png" alt="JacksonBees logo">
+            <img id="logo" src="resources/img/JacksonBees logo square.png" alt="JacksonBees logo">
             <div class="header-text">
                 <h2>Raw, Local Honey and Beeswax Products</h2>
                 <h2>of Penfield, NY</h2>
             </div>
         </div>
         <nav id="navbar">
-            <label id="navbutton"><a href="#header">Home</a></label>
-            <label id="navbutton"><a href="#porchstand">Visit Us</a></label>
+            <label class="navbutton" id="home-button"><a href="#top">Home</a></label>
+            <label class="navbutton" id="visit-us-button"><a href="#porchstand">Visit Us</a></label>
         </nav>
     </header>
     <main>
-        <h1>Website Coming Soon!</h1>
-        <img id="honey_stand" src="resources/img/honey_stand.jpg" alt="A picture of a honey stand">
+        <h1>Products</h1>
+        <div class="products">
+            <div class="product" id="product-honey">
+                <!-- <img src="resources/img/honey.png" alt="Honey"> -->
+                <h2>Raw, Unfiltered Honey</h2>
+                <ul>
+                    <li>1 lb jar - $10 (Most Popular)</li>
+                    <li>1 qt (3 lbs) jar - $20</li>
+                    <li>8 oz Squeezable Bear - $5</li>
+                </ul>
+            </div>
+            <div class="product" id="product-infusion">
+                <!-- <img src="resources/img/infusion.png" alt="Infusion"> -->
+                <h2>Infused Honey</h2>
+                <p>10 oz - $10</p>
+                <ul>
+                    <li>1 lb. jar: $12</li>
+                    <li>2 lb. jar: $22</li>
+                    <li>5 lb. jar: $50</li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
             <address>
@@ -32,7 +53,11 @@
                 <p class="address">Penfield, NY 14526</p>
             </address>
             <button class="mapbutton" id="openMaps">Get Directions</button>
-    
+            <div class="icons">
+                <a href="https://www.facebook.com/jacksonbeespenfield" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/jacksonbees_honey_penfield" class="fa fa-instagram"></a>
+            </div>
+
             <script>
                 document.getElementById('openMaps').onclick = function() {
                     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
