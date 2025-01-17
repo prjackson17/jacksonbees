@@ -107,6 +107,31 @@ li::marker {
     font-size: 1rem;
 }
 
+.bar {
+    padding: 1px;
+    background-color: var(--header-color);
+    width: 100vw;
+    height: 100px;
+}
+
+.our-story-button {
+    padding: 5px;
+    background-color: var(--button-color);
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    transition: background-color 0.3s;
+}
+.our-story-button:hover {
+    background-color: var(--button-color);
+}
+.our-story-button a {
+    text-decoration: none;
+    color: white;
+}
+
 footer {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--header-color);
@@ -124,7 +149,7 @@ footer {
 .mapbutton {
     margin-top: 5px;
     padding: 5px;
-    background-color: #985b10;
+    background-color: var(--button-color);
     color: white; 
     border: none; 
     border-radius: 5px; 
@@ -133,10 +158,7 @@ footer {
     transition: background-color 0.3s; 
 }
 .mapbutton:hover {
-    background-color: #985b10cc; /* Add a darker blue when hovering */
-}
-.mapbutton:checked {
-    background-color: rgba(0, 0, 255, .5); /* Add a darker blue when hovering */
+    background-color: var(--button-hover-color); /* Add a darker blue when hovering */
 }
 
 /* Icons */
