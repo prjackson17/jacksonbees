@@ -141,13 +141,12 @@ footer {
 
 /* Icons */
 .fa {
-    padding: 10px 0;
+    padding-top: 10px;
     font-size: 36px;
     width: 36px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    margin: 5px;
     /* TODO - less room under icons */
 }
 
@@ -173,7 +172,7 @@ footer address {
 /* Large Screens */
 @media (min-width: 768px) {
     .header-content {
-        flex-direction: row; /* Stack logo and text vertically */
+        flex-direction: row; /* Unstack logo and text */
         align-items: center;
     }
 
@@ -182,7 +181,7 @@ footer address {
     }
 
     header h2 {
-        font-size: 1.25rem; /* Larger font size for larger screens */
+        font-size: 1.25rem;
     }
     /* TODO - make icons and buttons bigger */
 }
@@ -191,12 +190,12 @@ footer address {
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column; /* Stack the logo and nav bar vertically */
-        align-items: center;    /* Center align the elements */
+        align-items: center;
         padding: 10px;
     }
 
     #logo {
-        width: 30%; /* Make the logo smaller for smaller screens */
+        width: 30%;
         margin-bottom: 10px;
     }
 
