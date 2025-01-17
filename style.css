@@ -1,6 +1,7 @@
 :root {
     --header-color: #f9c901;
     --button-color: #985b10;
+    --button-hover-color: #985b10cc;
 }
 
 * {
@@ -16,9 +17,16 @@ html, body {
 }
 
 .navbutton {
+    margin: 0 5px 10px 5px;
     padding: 5px;
     background-color: #985b10;
-    margin: 10px;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    transition: background-color 0.3s; 
+    margin-bottom: 2px;
 }
 
 .navbutton a {
@@ -41,6 +49,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-content {
@@ -67,12 +77,6 @@ nav {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    padding-bottom: 5px;
 }
 
 header h2 {
@@ -127,10 +131,9 @@ footer {
     cursor: pointer; 
     font-size: 14px; 
     transition: background-color 0.3s; 
-    margin-bottom: 2px;
 }
 .mapbutton:hover {
-    background-color: rgba(0, 0, 255, 1); /* Add a darker blue when hovering */
+    background-color: #985b10cc; /* Add a darker blue when hovering */
 }
 .mapbutton:checked {
     background-color: rgba(0, 0, 255, .5); /* Add a darker blue when hovering */
@@ -162,6 +165,10 @@ background: var(--background-color);
 color: var(--button-color);
 }
 
+footer address {
+    margin-top: 3px;
+}
+
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .header-content {
@@ -176,6 +183,7 @@ color: var(--button-color);
     header h2 {
         font-size: 1.25rem; /* Larger font size for larger screens */
     }
+    /* make icons and buttons bigger */
 }
 
 /* Media query for smaller screens */
@@ -186,12 +194,24 @@ color: var(--button-color);
         padding: 10px;
     }
 
-    #honeybee {
-        width: 70%; /* Make the logo smaller for smaller screens */
+    #logo {
+        width: 35%; /* Make the logo smaller for smaller screens */
         margin-bottom: 10px;
     }
 
     header h2 {
-        font-size: 1rem; /* Smaller font size for smaller screens */
+        font-size: 0.9rem; 
+    }
+
+    body h1 {
+        font-size: 1.5rem;
+    }
+
+    body h2 {
+        font-size: 1.25rem;
+    }
+
+    body p {
+        font-size: 1rem;
     }
 }
