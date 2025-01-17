@@ -148,6 +148,7 @@ footer {
     text-decoration: none;
     border-radius: 50%;
     margin: 5px;
+    /* TODO - less room under icons */
 }
 
 .fa:hover {
@@ -169,7 +170,7 @@ footer address {
     margin-top: 3px;
 }
 
-/* Media query for larger screens */
+/* Large Screens */
 @media (min-width: 768px) {
     .header-content {
         flex-direction: row; /* Stack logo and text vertically */
@@ -183,10 +184,10 @@ footer address {
     header h2 {
         font-size: 1.25rem; /* Larger font size for larger screens */
     }
-    /* make icons and buttons bigger */
+    /* TODO - make icons and buttons bigger */
 }
 
-/* Media query for smaller screens */
+/* Small Screens */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column; /* Stack the logo and nav bar vertically */
@@ -195,7 +196,7 @@ footer address {
     }
 
     #logo {
-        width: 35%; /* Make the logo smaller for smaller screens */
+        width: 30%; /* Make the logo smaller for smaller screens */
         margin-bottom: 10px;
     }
 
@@ -203,15 +204,19 @@ footer address {
         font-size: 0.9rem; 
     }
 
-    body h1 {
+    main h1 {
         font-size: 1.5rem;
     }
 
-    body h2 {
+    main h2 {
         font-size: 1.25rem;
     }
 
-    body p {
+    main h3 {
+        font-size: 1.1rem;
+    }
+
+    main p {
         font-size: 1rem;
     }
 }
