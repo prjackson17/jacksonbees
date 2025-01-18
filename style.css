@@ -12,8 +12,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
     background-color: var(--tan-background-color);
     /* overflow-x: hidden; */
 }
@@ -39,7 +37,6 @@ html, body {
 
 header {
     background-color: var(--header-color);
-    width: 100vw;
     margin: 0;
     position: sticky;
     top: 0;
@@ -56,7 +53,6 @@ header.center-logo .header-content {
 }
 
 .header-content {
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -107,9 +103,8 @@ li {
 }
 
 .bar {
-    padding: 10px;
+    padding: 10px 0 10px 0;
     background-color: var(--header-color);
-    width: 100vw;
     height: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -136,7 +131,6 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--header-color);
     padding: 10px;
-    width: 100vw;
     box-sizing: border-box;
     margin: 0;
     box-shadow:  0 -4px 8px rgba(0, 0, 0, 0.2);;
@@ -233,7 +227,7 @@ footer address {
     .header-content {
         flex-direction: column; /* Stack the logo and nav bar vertically */
         align-items: center;
-        padding: 10px;
+        padding: 10px 0 10px 0;
     }
 
     #logo {
@@ -259,6 +253,16 @@ footer address {
 
     main p {
         font-size: 1rem;
+    }
+
+    .button {
+        padding: 5px 10px;
+        font-size: 1.25rem;
+        margin: 10px;
+    }
+
+    .our-story-text {
+        margin-bottom: 0;
     }
 }
 
