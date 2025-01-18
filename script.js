@@ -14,8 +14,7 @@ document.getElementById('openMaps').onclick = function() {
 window.onscroll = function() {
     var header = document.getElementById("header");
     var logo = document.getElementById("logo");
-    var h1 = header.querySelector("h1");
-    var h2 = header.querySelector("h2");
+    var h2 = header.querySelectorAll("h2");
     var scrollTop = document.documentElement.scrollTop;
 
     // Calculate the scale factor based on scroll position
@@ -23,8 +22,10 @@ window.onscroll = function() {
 
     // Apply the scale factor to the header elements
     header.style.padding = `${10 * scaleFactor}px 0`;
-    logo.style.width = `${100 * scaleFactor}px`;
+    logo.style.width = scaleFactor === 0.5 ? '120px' : `${100 * scaleFactor}px`;
     logo.style.height = "auto";
-    h1.style.fontSize = `${1.5 * scaleFactor}rem`;
-    h2.style.fontSize = `${1 * scaleFactor}rem`;
+    h2.forEach(function(h2) {
+        h2.style.fontSize = `${1 * scaleFactor}rem`;
+        h2.style.opacity = scaleFactor === 0.5 ? '0' : '1';
+    });
 };

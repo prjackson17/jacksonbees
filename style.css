@@ -2,6 +2,7 @@
     --header-color: #f9c901;
     --button-color: #985b10;
     --button-hover-color: #985b10cc;
+    --tan-background-color: #fffacd;
 }
 
 * {
@@ -13,7 +14,8 @@ html, body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #fffacd;
+    background-color: var(--tan-background-color);
+    /* overflow-x: hidden; */
 }
 
 .navbutton {
@@ -97,17 +99,12 @@ body {
 ul {
     padding-left: 0;
     margin: 0;
-    list-style-position: inside;
 }
 
 li {
     margin-left: 0;
     display: inline;
     margin-left: 5px;
-}
-
-li::marker {
-    font-size: 1rem;
 }
 
 .bar {
@@ -182,13 +179,13 @@ footer {
 
 /* Facebook icon */
 .fa-facebook {
-background: var(--background-color);
-color: var(--button-color);
+    background: var(--background-color);
+    color: var(--button-color);
 }
 
 .fa-instagram {
-background: var(--background-color);
-color: var(--button-color);
+    background: var(--background-color);
+    color: var(--button-color);
 }
 
 footer address {
