@@ -29,19 +29,12 @@ html, body {
     font-size: 14px; 
     transition: background-color 0.3s; 
     margin-bottom: 2px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .navbutton a {
     text-decoration: none;
     color: white;
-}
-
-.navbutton:hover {
-    color: blue;
-}
-
-#navbutton a:checked {
-    color:aqua;
 }
 
 header {
@@ -114,26 +107,26 @@ li {
 }
 
 .bar {
-    padding: 1px;
+    padding: 10px;
     background-color: var(--header-color);
     width: 100vw;
     height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .our-story-button {
-    padding: 5px;
+    padding: 10px;
     background-color: var(--button-color);
     color: white; 
     border: none; 
-    border-radius: 5px; 
+    border-radius: 3rem; 
     cursor: pointer; 
     font-size: 14px; 
     transition: background-color 0.3s;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-.our-story-button:hover {
-    background-color: var(--button-color);
-}
+
 .our-story-button a {
     text-decoration: none;
     color: white;
@@ -143,14 +136,19 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--header-color);
     padding: 10px;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     margin: 0;
+    box-shadow:  0 -4px 8px rgba(0, 0, 0, 0.2);;
 }
 
 .address {
     font-style: italic;
     margin: auto auto;
+}
+
+.button:hover {
+    background-color: var(--button-hover-color);
 }
 
 .mapbutton {
@@ -163,9 +161,7 @@ footer {
     cursor: pointer; 
     font-size: 14px; 
     transition: background-color 0.3s; 
-}
-.mapbutton:hover {
-    background-color: var(--button-hover-color); /* Add a darker blue when hovering */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Icons */
@@ -176,7 +172,6 @@ footer {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    /* TODO - less room under icons */
 }
 
 .fa:hover {
@@ -189,6 +184,7 @@ footer {
     color: var(--button-color);
 }
 
+/* Instagram icon */
 .fa-instagram {
     background: var(--background-color);
     color: var(--button-color);
@@ -211,6 +207,17 @@ footer address {
 
     header h2 {
         font-size: 1.25rem;
+    }
+
+    .bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .our-story-text {
+        margin-right: 20px;
     }
 
     .button {
