@@ -28,4 +28,11 @@ window.onscroll = function() {
         h2.style.fontSize = `${1 * scaleFactor}rem`;
         h2.style.opacity = scaleFactor === 0.5 ? '0' : '1';
     });
+
+    // Add or remove the 'center-logo' class based on the scale factor
+    if (scaleFactor === 0.5) {
+        header.classList.add('center-logo');
+    } else {
+        header.classList.remove('center-logo');
+    }
 };
