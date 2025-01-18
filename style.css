@@ -102,6 +102,10 @@ li {
     margin-left: 5px;
 }
 
+#lb-img {
+    width: 50%;
+}
+
 .bar {
     padding: 10px 0 10px 0;
     background-color: var(--header-color);
