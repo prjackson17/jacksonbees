@@ -241,3 +241,22 @@ footer address {
         font-size: 1rem;
     }
 }
+
+/* Shrink header items on scroll */
+header.shrink {
+    padding: 5px 0;
+}
+
+header.shrink #logo {
+    width: 50px;
+    height: auto;
+    margin: 5px 10px;
+}
+
+header.shrink h1 {
+    font-size: 1rem;
+}
+
+header.shrink h2 {
+    font-size: 0.75rem;
+}
