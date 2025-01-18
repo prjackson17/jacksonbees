@@ -58,6 +58,7 @@ header {
 
 header.center-logo .header-content {
     justify-content: center; /* Center the logo */
+    align-content: center;
     flex-direction: column;
 }
 
@@ -210,6 +211,12 @@ footer address {
 
     header h2 {
         font-size: 1.25rem;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1.25rem;
+        margin: 10px;
     }
     /* TODO - make icons and buttons bigger */
 }

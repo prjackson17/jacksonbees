@@ -14,19 +14,23 @@ document.getElementById('openMaps').onclick = function() {
 window.onscroll = function() {
     var header = document.getElementById("header");
     var logo = document.getElementById("logo");
-    var h2 = header.querySelectorAll("h2");
+    var h2Elements = header.querySelectorAll("h2");
     var scrollTop = document.documentElement.scrollTop;
+    var originalLogoWidth = window.innerWidth > 768 ? 200 : 150;
 
     // Calculate the scale factor based on scroll position
     var scaleFactor = Math.max(0.5, 1 - scrollTop / 200);
 
     // Apply the scale factor to the header elements
     header.style.padding = `${10 * scaleFactor}px 0`;
-    logo.style.width = scaleFactor === 0.5 ? '120px' : `${100 * scaleFactor}px`;
+    logo.style.width = scaleFactor === 0.5 ? `${originalLogoWidth - 15}` : `${originalLogoWidth * scaleFactor}px`;
     logo.style.height = "auto";
-    h2.forEach(function(h2) {
-        h2.style.fontSize = `${1 * scaleFactor}rem`;
-        h2.style.opacity = scaleFactor === 0.5 ? '0' : '1';
+    h2Elements.forEach(function(h2) {
+        if (!h2.dataset.originalText) {
+            h2.dataset.originalText = h2.textContent;
+        }
+        h2.textContent = scaleFactor === 0.5 ? '' : h2.dataset.originalText;
+        h2.style.fontSize = `${1.25 * scaleFactor}rem`;
     });
 
     // Add or remove the 'center-logo' class based on the scale factor
@@ -34,5 +38,12 @@ window.onscroll = function() {
         header.classList.add('center-logo');
     } else {
         header.classList.remove('center-logo');
+    }
+
+    // Push the header up out of the way if scrollTop is 200 or more
+    if (scrollTop >= 200) {
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        header.style.transform = 'translateY(0)';
     }
 };
