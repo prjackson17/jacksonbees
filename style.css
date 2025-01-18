@@ -100,6 +100,7 @@ body {
 }
 
 .product {
+    margin: auto;
     width: 90%;
     display: flex;  
     flex-direction: column;
@@ -107,7 +108,7 @@ body {
     border: 5px solid var(--button-color);
     border-radius: 10px;
     background-color: var(--header-color);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 -2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .product img {
