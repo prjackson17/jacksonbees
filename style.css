@@ -102,6 +102,18 @@ li {
     margin-left: 5px;
 }
 
+figure {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
 #lb-img {
     width: 50%;
 }
@@ -205,6 +217,10 @@ footer address {
 
     header h2 {
         font-size: 1.25rem;
+    }
+
+    #lb-img {
+        width: 25%;
     }
 
     .bar {
