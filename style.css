@@ -13,7 +13,6 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: var(--tan-background-color);
-    /* overflow-x: hidden; */
 }
 
 .navbutton {
@@ -91,15 +90,46 @@ body {
     text-align: center;
 }
 
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto 30px auto;
+    width: 90%;
+}
+
+.product {
+    width: 90%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid var(--button-color);
+    border-radius: 10px;
+    background-color: var(--header-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product img {
+    width: 50%;
+    height: auto;
+}
+
+.product figcaption {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
 ul {
     padding-left: 0;
     margin: 0;
+    list-style-type: none;
 }
 
 li {
-    margin-left: 0;
-    display: inline;
-    margin-left: 5px;
+    margin: 5px;
+    font-size: 1.25rem;
 }
 
 figure {
@@ -112,10 +142,6 @@ figure {
 figcaption {
     margin-top: 5px;
     font-size: 0.9rem;
-}
-
-#lb-img {
-    width: 50%;
 }
 
 .bar {
@@ -182,6 +208,7 @@ footer {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    transition: background-color 0.3s; 
 }
 
 .fa:hover {
@@ -219,8 +246,10 @@ footer address {
         font-size: 1.25rem;
     }
 
-    #lb-img {
-        width: 25%;
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 0;
     }
 
     .bar {
@@ -273,6 +302,10 @@ footer address {
 
     main p {
         font-size: 1rem;
+    }
+
+    li {
+        font-size: 1.1rem;
     }
 
     .button {
