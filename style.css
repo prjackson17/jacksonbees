@@ -126,6 +126,7 @@ li::marker {
     cursor: pointer; 
     font-size: 14px; 
     transition: background-color 0.3s;
+    margin-bottom: 5px;
 }
 .our-story-button:hover {
     background-color: var(--button-color);
