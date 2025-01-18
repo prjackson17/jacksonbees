@@ -13,9 +13,18 @@ document.getElementById('openMaps').onclick = function() {
 // JavaScript to add class on scroll
 window.onscroll = function() {
     var header = document.getElementById("header");
-    if (document.documentElement.scrollTop > 50) {
-        header.classList.add("shrink");
-    } else {
-        header.classList.remove("shrink");
-    }
+    var logo = document.getElementById("logo");
+    var h1 = header.querySelector("h1");
+    var h2 = header.querySelector("h2");
+    var scrollTop = document.documentElement.scrollTop;
+
+    // Calculate the scale factor based on scroll position
+    var scaleFactor = Math.max(0.5, 1 - scrollTop / 200);
+
+    // Apply the scale factor to the header elements
+    header.style.padding = `${10 * scaleFactor}px 0`;
+    logo.style.width = `${100 * scaleFactor}px`;
+    logo.style.height = "auto";
+    h1.style.fontSize = `${1.5 * scaleFactor}rem`;
+    h2.style.fontSize = `${1 * scaleFactor}rem`;
 };
