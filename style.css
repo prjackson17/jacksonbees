@@ -95,14 +95,26 @@ body {
     text-align: center;
 }
 
-.products {
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    align-items: center;
+}
+
+/* .products {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
-    align-items: start;
+    align-items: center;
     width: 90%;
     margin-bottom: 30px;
+} */
+
+.products {
+    flex: 100%;
+    max-width: 100%;
 }
 
 .product {
@@ -240,7 +252,23 @@ footer address {
     margin-top: 3px;
 }
 
-/* Large Screens */
+/* Medium Screens */
+@media (min-width: 600px) {
+    .products {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1000px) {
+    .products {
+        flex: 33.3%;
+        max-width: 33.3%;
+    }
+}
+
+/* Larger Screens */
 @media (min-width: 768px) {
     .header-content {
         flex-direction: row; /* Unstack logo and text */
@@ -253,12 +281,6 @@ footer address {
 
     header h2 {
         font-size: 1.25rem;
-    }
-
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 30px;
-        column-gap: 0;
     }
 
     .bar {
@@ -325,6 +347,11 @@ footer address {
 
     .our-story-text {
         margin-bottom: 0;
+    }
+
+    .products {
+        flex: 100%;
+        max-width: 100%;
     }
 }
 
